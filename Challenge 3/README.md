@@ -1,4 +1,4 @@
-# Challenge 1 – Largest Prime Factor
+# Challenge 3 – Largest Prime Factor
 
 In this challenge, the goal is to **find the largest prime factor** of a number.
 
