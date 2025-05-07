@@ -11,7 +11,7 @@ Find the largest prime number of $600851475143$
 
 ## Data Context
 
-- `n`: positive integer number.
+- `n`: positive integer number greater than 1.
 
 Before reading the solutions below, try solving the problem yourself and compare your approach and results.
 
