@@ -17,7 +17,7 @@ Before reading the solutions below, try solving the problem yourself and compare
 
 ---
 
-## First method
+## First approach
 
 Computes all possible products of two numbers less than the threshold and cheks if the product is a palindrome.
 

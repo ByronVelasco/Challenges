@@ -17,7 +17,7 @@ Before reading the solutions below, try solving the problem yourself and compare
 
 ---
 
-## **Intuitive method**
+## **First approach**
 
 This method involves computing all Fibonacci's numbers less than the threshold and summing those that are even numbers.
 

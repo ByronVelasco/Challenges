@@ -18,7 +18,7 @@ Before reading the solutions below, try solving the problem yourself and compare
 
 ---
 
-## Naive Approach
+## First approach
 
 This method involves iterating through all the numbers less than the threshold and summing those that are divisible by either `n1` or `n2`.
 
@@ -28,7 +28,7 @@ This method involves iterating through all the numbers less than the threshold a
 
 ---
 
-## Optimal Approach (Mathematical Formula)
+## Optimal method
 
 The optimal method avoids looping and instead uses arithmetic series formulas to compute the result directly. It works by summing the multiples of each number individually and subtracting the sum of their common multiples (to avoid double-counting).
 

@@ -17,7 +17,7 @@ Before reading the solutions below, try solving the problem yourself and compare
 
 ---
 
-## First method
+## First approach
 
 Uses the prime factors decomposition of a number. It divides the number by its prime factors (k=2, 3, 5, 7,...) until `n=1`. When this point is reached, the last prime factor is the largest one. Note that 2 is the only even prime number. Thus, we can speed up the algorithm with steps by 2, starting from 3.
 
