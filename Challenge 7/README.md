@@ -1,4 +1,4 @@
-# Challenge 6 – k-th prime number
+# Challenge 7 – k-th prime number
 
 In this challenge, the goal is to **find the k-th prime number**.
 
