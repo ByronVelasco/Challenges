@@ -20,9 +20,13 @@ Before reading the solution below, try solving the problem yourself and compare 
 
 ---
 
-## Algorithm
+## First Approach
 
 Iterates through all starting numbers less than `k`, generating their respective Collatz sequences by repeatedly applying the sequence rules until reaching 1. For each starting number, it counts the length of the sequence. The algorithm tracks and returns the starting number that produces the longest Collatz sequence.
+
+## Optimized Approach
+
+Many numbers in the Collatz sequence eventually reach values that have already been computed for smaller starting numbers. To avoid redundant calculations, we use memoization to store the length of each sequence as it is found. When generating a sequence, if we encounter a number whose sequence length is already known, we can immediately use the stored value instead of recalculating it. Additionally, since every even number's next step is simply half its value, we can use the relation `lenght_Collatz(n) = length_Collatz(n/2) + 1` for even `n` to further optimize the process. This approach significantly reduces computation time, especially for large values of `k`.
 
 ---
 
