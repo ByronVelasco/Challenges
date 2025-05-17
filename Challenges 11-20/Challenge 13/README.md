@@ -18,7 +18,7 @@ Before reading the solution below, try solving the problem yourself and compare 
 
 ---
 
-## Algorythm
+## Algorithm
 
 Compute the total sum, and then, choose only the first k digits.
 

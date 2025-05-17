@@ -18,7 +18,7 @@ Before reading the solution below, try solving the problem yourself and compare 
 
 ---
 
-## Algorythm
+## Algorithm
 
 Search the largest product of adjacent numbers in the three directions separetly: horizontal, vertical and diagonal. Choose the largest one. Recall that any product by zero is zero.
 

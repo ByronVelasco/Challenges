@@ -17,7 +17,7 @@ Before reading the solution below, try solving the problem yourself and compare 
 
 ---
 
-## Algorythm
+## Algorithm
 
 Computes every multiple of n and verifies if it is a multiple of every number in the list.
 

@@ -17,7 +17,7 @@ Before reading the solution below, try solving the problem yourself and compare 
 
 ---
 
-## Algorythm
+## Algorithm
 
 Look for all prime numbers below `k` and sum them all. Recall that the only even prime number is two, and that any number has at most one prime number above $\sqrt{n}$.
 

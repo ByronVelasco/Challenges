@@ -17,7 +17,7 @@ Before reading the solution below, try solving the problem yourself and compare 
 
 ---
 
-## Algorythm
+## Algorithm
 
 Search all the possible combinations for which $a+b+c$, with $a<b<c$, such that $a^2+b^2=c^2$, and then find the product of this triplet.
 
