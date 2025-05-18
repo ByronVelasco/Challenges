@@ -1,48 +1,32 @@
 # Challenge 1 – Sum of Multiples
 
-In this challenge, the goal is to **sum all the multiples** of two given numbers that are less than a specified threshold.
+In this challenge, the goal is to **find the sum of all natural numbers less than a given threshold that are multiples of either of two specified numbers.**
 
 ## Problem Statement
 
 **Task:**  
-Find the sum of all the multiples of `3` and `5` that are **less than `1000`**.
-
----
+Find the sum of all multiples of `3` and `5` that are **less than `1000`**.
 
 ## Data Context
 
-- `threshold`: an integer greater than 1.
-- `n1` and `n2`: positive integers.
+- `k`: an integer greater than 1.
+- `n1` and `n2`: positive integers (preferably coprime for the optimal method to work correctly).
 
 Before reading the solutions below, try solving the problem yourself and compare your approach and results.
 
----
+## Brute Force Function Implementation
 
-## First approach
+This first approach uses a straightforward loop to check each number below `k` and adds it to the sum if it is a multiple of either `n1` or `n2`. This brute-force method is easy to understand and implement, but may not be the most efficient for very large values of `k`.
 
-This method involves iterating through all the numbers less than the threshold and summing those that are divisible by either `n1` or `n2`.
+## Efficient Sum Using Inclusion-Exclusion Principle
 
-- **Computational Cost:** Linear (proportional to the threshold)
-- **Advantages:** Simple and intuitive
-- **Disadvantages:** Becomes slower with larger inputs
+The optimized version uses mathematical formulas and the inclusion-exclusion principle to efficiently compute the sum of all multiples of `n1` or `n2` below `k`. Instead of checking each number individually, it calculates the sum of multiples directly, resulting in much faster performance, especially for large values of `k`.
 
----
-
-## Optimal method
-
-The optimal method avoids looping and instead uses arithmetic series formulas to compute the result directly. It works by summing the multiples of each number individually and subtracting the sum of their common multiples (to avoid double-counting).
-
-For a number `x`, the sum of its multiples below a threshold is computed using the formula for the sum of the first `n` integers multiplied by `x`, where `n` is the number of such multiples.
-
-- **Computational Cost:** Constant time (independent of the target)
-- **Advantages:** Extremely fast, ideal for large targets
-- **Disadvantages:** Requires understanding of arithmetic series and handling overlapping multiples correctly (using least common multiple)
-
----
+**Note:** This function works correctly when `n1` and `n2` are coprime (i.e., have no common divisors other than 1).
 
 ## Final Result
 
-For `threshold = 1000`, `n1 = 3`, and `n2 = 5`, the correct result is:
+For `k = 1000`, `n1 = 3`, and `n2 = 5`, the correct result is:
 
 **233168**
 
