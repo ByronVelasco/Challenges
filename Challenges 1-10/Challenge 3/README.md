@@ -1,13 +1,11 @@
 # Challenge 3 – Largest Prime Factor
 
-In this challenge, the goal is to **find the largest prime factor** of a number.
+In this challenge, the objective is to **determine the largest prime factor** of a given number.
 
 ## Problem Statement
 
 **Task:**  
-Find the largest prime number of $600851475143$
-
----
+Find the largest prime factor of $600851475143$
 
 ## Data Context
 
@@ -15,21 +13,22 @@ Find the largest prime number of $600851475143$
 
 Before reading the solutions below, try solving the problem yourself and compare your approach and results.
 
----
+## Brute Force Function Implementation
 
-## First approach
+To find the largest prime factor of a given number:
 
-Uses the prime factors decomposition of a number. It divides the number by its prime factors (k=2, 3, 5, 7,...) until `n=1`. When this point is reached, the last prime factor is the largest one. Note that 2 is the only even prime number. Thus, we can speed up the algorithm with steps by 2, starting from 3.
+1. First, determine if the number itself is prime by checking divisibility from 2 up to its square root. If it is only divisible by 1 and itself, it is prime.
+2. If the number is not prime, search for its largest factor by starting from half of the number and decrementing.
+3. For each candidate factor, check if it divides the number evenly and if it is a prime number.
+4. The process stops when the largest such prime factor is found.
 
----
+## Efficient Prime Factorization by Progressive Division
 
-## Optimal Approach
+To efficiently determine the largest prime factor of a given integer, one can utilize the following mathematical approach:
 
-It has been proven that a prime factor of `n` is at most equal to $\sqrt{n}$. If there is no any prime number until this point, then `n` is a prime number.
+First, remove all factors of 2 from the number, as 2 is the smallest and only even prime. This ensures that the remaining value is odd, simplifying subsequent steps. After eliminating all factors of 2, proceed to check divisibility by odd numbers, starting from 3 and incrementing by 2 each time. For each odd candidate, if it divides the current value evenly, divide the value by this candidate and continue the process. This stepwise division removes smaller prime factors early, reducing the size of the number to be factored and thus improving efficiency.
 
-- **Advantages:** ideal for large targets
-
----
+The process continues until the square of the current candidate exceeds the remaining value. At this point, if the remaining value is greater than 1, it must itself be a prime number and is therefore the largest prime factor. This method is justified because, after removing all smaller prime factors, any remaining factor greater than the square root of the original number must be prime.
 
 ## Final Result
 
