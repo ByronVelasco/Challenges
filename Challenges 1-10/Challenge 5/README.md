@@ -26,3 +26,7 @@ To efficiently compute the LCM for a range of numbers, one can use the mathemati
 For `n = 20`, the correct result is:
 
 **232792560**
+
+---
+
+*Challenge yourself: Try solving it using both methods and reflect on their differences in logic and efficiency!*

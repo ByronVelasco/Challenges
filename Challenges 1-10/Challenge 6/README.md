@@ -1,13 +1,11 @@
 # Challenge 6 – Difference of square sums
 
-In this challenge, the goal is to **find the difference of $S_1$ and $S_2$** where $S_1$ is the sum of the squares of the first `n` natural numbers, and $S_2$ is the square of the sum of the first `n` natural numbers.
+In this challenge, the goal is to **calculate the difference between the square of the sum and the sum of the squares** of the first n natural numbers.
 
 ## Problem Statement
 
 **Task:**  
-Find such difference of the first one hundred natural numbers.
-
----
+Find the difference between the square of the sum and the sum of the squares of the first one hundred natural numbers.
 
 ## Data Context
 
@@ -15,27 +13,35 @@ Find such difference of the first one hundred natural numbers.
 
 Before reading the solutions below, try solving the problem yourself and compare your approach and results.
 
----
-
-## First approach
+## Calculating the Sum Square Difference
 
 Computes the sum of the first `n` natural numbers and squares it. Then, computes the sums of squares of the first `n` natural numbers. Finally, computes the difference.
 
-- **Computational Cost:** high cost
-- **Advantages:** Simple and intuitive
-- **Disadvantages:** Becomes very slow with larger inputs
+## Optimized Calculation Using Closed-Form Formulas
 
----
+To find the difference between the square of the sum and the sum of the squares of the first **n** natural numbers, consider the following:
 
-## Optimal Approach
+1. The sum of the first _n_ natural numbers is given by the formula:  
+$$
+S = 1 + 2 + 3 + \ldots + n = \frac{n(n+1)}{2}
+$$
 
-The optimal method avoids looping and instead uses arithmetic series formulas to compute the result directly. Mathematically, the sum of squares of the first `n` natural numbers is given by $\frac{n(n+1)(2n+1)}{2}$. The square of the sum of the first `n` natural numbers is given by $\left(\frac{n(n+1)}{2}\right)^2$. With some arytmethic, the result is $\frac{n(n+1)(n-1)(3*n+2)}{12}$.
+2. The square of this sum is:  
+$$
+(S)^2 = \left(\frac{n(n+1)}{2}\right)^2
+$$
 
-- **Computational Cost:** Constant time (independent of the target).
-- **Advantages:** Extremely fast, ideal for large targets
-- **Disadvantages:** Requires understanding of arithmetic series.
+3. The sum of the squares of the first _n_ natural numbers is:  
+$$
+Q = 1^2 + 2^2 + 3^2 + \ldots + n^2 = \frac{n(n+1)(2n+1)}{6}
+$$
 
----
+4. The required difference is:  
+$$
+(S)^2 - Q = \left(\frac{n(n+1)}{2}\right)^2 - \frac{n(n+1)(2n+1)}{6}
+$$
+
+This expression provides a direct way to compute the difference using closed-form formulas.
 
 ## Final Result
 
