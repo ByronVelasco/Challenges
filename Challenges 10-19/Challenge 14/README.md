@@ -1,16 +1,16 @@
 # Challenge 14 – Longest Collatz Sequence
 
-In this challenge, the goal is to **find the longest Collatz Sequence**. A **Collatz sequence** is a sequence of numbers produced from a starting positive integer, following these rules:
+In this challenge, the objective is to **find the starting number under a given limit that produces the longest Collatz sequence**.  
+A **Collatz sequence** is generated from a starting positive integer by repeatedly applying the following rules:
 - If the number is even, divide it by 2.
 - If the number is odd, multiply it by 3 and add 1.
-Repeat the process with the resulting number. The sequence ends when it reaches 1.
+
+Continue this process with each new value until the sequence reaches 1.
 
 ## Problem Statement
 
 **Task:**  
 Find the longest Collatz Sequence with a starting number under 1 million.
-
----
 
 ## Data Context
 
@@ -18,20 +18,20 @@ Find the longest Collatz Sequence with a starting number under 1 million.
 
 Before reading the solution below, try solving the problem yourself and compare your approach and results.
 
----
+## Systematic Generation and Analysis of Collatz Sequences
 
-## First Approach
+This approach systematically examines every integer from 1 up to a specified limit, generating the Collatz sequence for each number. For each starting value, it repeatedly applies the Collatz rules—halving the number if it is even, or multiplying by three and adding one if it is odd—until reaching 1. The length of each sequence is tracked, and the method identifies the starting number that produces the longest sequence within the given range.
 
-Iterates through all starting numbers less than `k`, generating their respective Collatz sequences by repeatedly applying the sequence rules until reaching 1. For each starting number, it counts the length of the sequence. The algorithm tracks and returns the starting number that produces the longest Collatz sequence.
+## Optimized Collatz Sequence Search Using Memoization
 
-## Optimized Approach
-
-Many numbers in the Collatz sequence eventually reach values that have already been computed for smaller starting numbers. To avoid redundant calculations, we use memoization to store the length of each sequence as it is found. When generating a sequence, if we encounter a number whose sequence length is already known, we can immediately use the stored value instead of recalculating it. Additionally, since every even number's next step is simply half its value, we can use the relation `lenght_Collatz(n) = length_Collatz(n/2) + 1` for even `n` to further optimize the process. This approach significantly reduces computation time, especially for large values of `k`.
-
----
+This approach leverages memoization to efficiently determine the length of Collatz sequences for large ranges of numbers. By storing previously computed sequence lengths in a dictionary, it avoids redundant calculations for numbers that appear multiple times across different sequences. The method iterates through a subset of numbers, generating their Collatz sequences until reaching a value with a known sequence length, then updates the stored lengths for all encountered values. This significantly reduces computation time compared to recalculating each sequence from scratch.
 
 ## Final Result
 
 For `k=1000000`, the correct result is:
 
 **837799**
+
+---
+
+*Challenge yourself: Try solving it using both methods and reflect on their differences in logic and efficiency!*
