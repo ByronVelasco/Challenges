@@ -14,3 +14,7 @@ All challenges can be found on the official Project Euler website:
 👉 [https://projecteuler.net/archives](https://projecteuler.net/archives)
 
 Feel free to explore, learn, and contribute!
+
+---
+
+&copy; Byron Velasco, 2025
